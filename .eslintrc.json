@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:vue/vue3-recommended", // Recommended vue 3 linting configs.
+    "eslint:recommended", // ESlint recommended configuration by eslint.
+    "plugin:import/recommended", // Linting of ES2015+ import/export syntax.
+    "plugin:@typescript-eslint/recommended", // Turns on rules from TypeScript-specific plugin.
+    "plugin:prettier/recommended" // Turns off all rules that are unnecessary or might conflict with Prettier.
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "simple-import-sort" // Plugin for sorting imports in file.
+  ],
+  "rules": {
+    "vue/script-setup-uses-vars": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/no-named-as-default-member": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  },
+  "env": {
+    "es2021": true, // enable ES2021 features.
+    "browser": true, // enable use of global browser variables like `windows`.
+    "node": true, // enable use of global node variables like `process`.
+    "vue/setup-compiler-macros": true // enable use of vue compiler macros.
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser", // Allows ESlint to understand TypeScript syntax.
+    "project": "./tsconfig.json", // Specify where to find the root tsconfig file of your project.
+    "extraFileExtensions": [".vue"], // Add .vue file extension support.
+    "ecmaVersion": 2021, // ECMAScript version supported in the project.
+    "sourceType": "module" // set to `module` because we ue ECMAScript modules.
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`.
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.spec.ts"],
+      "extends": ["plugin:cypress/recommended"],
+      "plugins": ["cypress"],
+      "rules": {
+        "cypress/no-force": "warn",
+        "cypress/assertion-before-screenshot": "warn",
+        "cypress/require-data-selectors": "warn",
+        "cypress/no-pause": "error"
+      },
+      "env": {
+        "cypress/globals": true // enable Cypress global variables.
+      }
+    }
+  ]
+}
