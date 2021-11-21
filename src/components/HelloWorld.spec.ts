@@ -10,6 +10,6 @@ describe("HelloWorld", () => {
       },
     });
 
-    cy.get("h1").contains("Hello Cypress!");
+    cy.get("[data-testid='title']").contains("Hello Cypress!");
   });
 });
