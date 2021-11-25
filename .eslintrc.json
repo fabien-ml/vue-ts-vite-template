@@ -44,7 +44,7 @@
   },
   "overrides": [
     {
-      "files": ["src/**/*.spec.ts"],
+      "files": ["src/**/*.spec.ts?(x)"],
       "extends": ["plugin:cypress/recommended"],
       "plugins": ["cypress"],
       "rules": {

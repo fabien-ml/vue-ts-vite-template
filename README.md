@@ -65,7 +65,7 @@ npm run build
 
 ### Test commands
 
-- Run tests
+- Run unit tests
   ```bash
   npm run test:unit
   ```
