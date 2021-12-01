@@ -8,15 +8,10 @@ export default defineConfig({
   plugins: [legacy(), vue()],
   resolve: {
     alias: [
+      // for TypeScript path alias import like : @/x/y/z
       {
-        // for import like : @/x/y/z
-        find: /@\//,
-        replacement: `${path.resolve(__dirname, "src")}/`,
-      },
-      {
-        // for import like : ~x/y/z
-        find: /~(.*)/,
-        replacement: `${path.resolve(__dirname, "node_modules")}/$1`,
+        find: "@",
+        replacement: path.resolve(__dirname, "src"),
       },
     ],
   },
