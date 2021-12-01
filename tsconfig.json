@@ -16,7 +16,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "types": ["vite/client", "node", "cypress"],
+    "types": ["vite/client", "node", "jest"],
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]

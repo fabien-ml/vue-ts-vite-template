@@ -44,17 +44,21 @@
   },
   "overrides": [
     {
-      "files": ["src/**/*.spec.ts?(x)"],
-      "extends": ["plugin:cypress/recommended"],
-      "plugins": ["cypress"],
+      "files": [
+        "src/**/__tests__/**/*.[jt]s?(x)",
+        "src/**/?(*.)+(spec|test).[jt]s?(x)"
+      ], // Override config for same files pattern as jest `testMatch` default value
+      "extends": ["plugin:jest/recommended", "plugin:jest/style"],
+      "plugins": ["jest"],
       "rules": {
-        "cypress/no-force": "warn",
-        "cypress/assertion-before-screenshot": "warn",
-        "cypress/require-data-selectors": "warn",
-        "cypress/no-pause": "error"
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
       },
       "env": {
-        "cypress/globals": true // enable Cypress global variables.
+        "jest/globals": true // enable Jest global variables.
       }
     }
   ]

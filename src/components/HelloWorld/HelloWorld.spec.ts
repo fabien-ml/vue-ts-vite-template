@@ -1,15 +1,15 @@
-import { mount } from "@cypress/vue";
+import { mount } from "@vue/test-utils";
 
 import HelloWorld from "./HelloWorld.vue";
 
 describe("HelloWorld", () => {
   it("renders a message", () => {
-    mount(HelloWorld, {
-      propsData: {
+    const wrapper = mount(HelloWorld, {
+      props: {
         msg: "Hello Cypress!",
       },
     });
 
-    cy.get("[data-testid='title']").contains("Hello Cypress!");
+    expect(wrapper.text()).toContain("Hello Cypress!");
   });
 });

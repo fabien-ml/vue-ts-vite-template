@@ -7,6 +7,7 @@ This is a [Vue](https://vuejs.org/) + [TypeScript](https://www.typescriptlang.or
 - [VueJS](https://vuejs.org/)
 - [Vite](https://vitejs.dev)
 - [TypeScript](https://www.typescriptlang.org)
+- [Jest](https://jestjs.io)
 - [Cypress](https://www.cypress.io)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
