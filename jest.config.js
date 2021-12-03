@@ -20,6 +20,10 @@ module.exports = {
     "^.+\\.vue$": "@vue/vue3-jest", // Transform Vue files using vue3-jest
   },
 
+  // A list of paths to modules that run some code to configure or set up the testing framework before each test file in the suite is executed
+  // https://jestjs.io/docs/configuration#setupfilesafterenv-array
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+
   // Code coverage config
   // https://jestjs.io/docs/configuration#collectcoveragefrom-array
   collectCoverage: true,

@@ -27,13 +27,16 @@
     "node": true, // enable use of global node variables like `process`.
     "vue/setup-compiler-macros": true // enable use of vue compiler macros.
   },
-  "parser": "vue-eslint-parser",
+  "parser": "vue-eslint-parser", // Vue specific parser
   "parserOptions": {
     "parser": "@typescript-eslint/parser", // Allows ESlint to understand TypeScript syntax.
     "project": "./tsconfig.json", // Specify where to find the root tsconfig file of your project.
     "extraFileExtensions": [".vue"], // Add .vue file extension support.
     "ecmaVersion": 2021, // ECMAScript version supported in the project.
-    "sourceType": "module" // set to `module` because we ue ECMAScript modules.
+    "sourceType": "module", // set to `module` because we ue ECMAScript modules.
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "settings": {
     "import/resolver": {
@@ -45,8 +48,8 @@
   "overrides": [
     {
       "files": [
-        "src/**/__tests__/**/*.[jt]s?(x)",
-        "src/**/?(*.)+(spec|test).[jt]s?(x)"
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
       ], // Override config for same files pattern as jest `testMatch` default value
       "extends": ["plugin:jest/recommended", "plugin:jest/style"],
       "plugins": ["jest"],
