@@ -15,7 +15,7 @@
     "test:e2e:ci": "start-server-and-test serve 3000 'cypress run'",
     "typecheck": "vue-tsc --noEmit",
     "format": "prettier --write 'src/**/*.{ts,vue}' && git update-index --again",
-    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ."
+    "lint": "eslint 'src/**/*.{ts,vue}'"
   },
   "dependencies": {
     "vue": "^3.2.16"
