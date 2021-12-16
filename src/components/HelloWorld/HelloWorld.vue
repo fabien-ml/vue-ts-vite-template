@@ -39,6 +39,10 @@
     color: #42b983;
   }
 
+  p {
+    margin: 16px 0;
+  }
+
   label {
     margin: 0 0.5em;
     font-weight: bold;
