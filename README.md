@@ -70,6 +70,10 @@ npm run build
   ```bash
   npm run test:unit
   ```
+- Run unit tests with coverage
+  ```bash
+  npm run test:unit:coverage
+  ```
 - Run e2e tests
   ```bash
   npm run test:e2e

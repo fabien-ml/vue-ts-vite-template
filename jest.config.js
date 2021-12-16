@@ -26,7 +26,6 @@ module.exports = {
 
   // Code coverage config
   // https://jestjs.io/docs/configuration#collectcoveragefrom-array
-  collectCoverage: true,
   coverageDirectory: "<rootDir>/coverage/",
   collectCoverageFrom: [
     "<rootDir>/src/**/*.{ts,tsx,vue}",
