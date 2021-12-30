@@ -7,7 +7,6 @@ This is a [Vue](https://vuejs.org/) + [TypeScript](https://www.typescriptlang.or
 - [VueJS](https://vuejs.org/)
 - [Vite](https://vitejs.dev)
 - [TypeScript](https://www.typescriptlang.org)
-- [Jest](https://jestjs.io)
 - [Cypress](https://www.cypress.io)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
@@ -39,7 +38,7 @@ This is a [Vue](https://vuejs.org/) + [TypeScript](https://www.typescriptlang.or
    npm install
    ```
 
-5. Serve with hot reload at http://localhost:3000.
+5. Serve with hot reload at http://localhost:5050.
    ```bash
    npm run dev
    ```
@@ -69,10 +68,6 @@ npm run build
 - Run unit tests
   ```bash
   npm run test:unit
-  ```
-- Run unit tests with coverage
-  ```bash
-  npm run test:unit:coverage
   ```
 - Run e2e tests
   ```bash

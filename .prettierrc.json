@@ -1,4 +1,4 @@
 {
   "arrowParens": "avoid",
-  "vueIndentScriptAndStyle": true
+  "vueIndentScriptAndStyle": false
 }

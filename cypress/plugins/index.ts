@@ -1,6 +1,8 @@
+/* eslint-env node */
+/// <reference types="node" />
 /// <reference types="cypress" />
 // ***********************************************************
-// This example plugins/index.js can be used to load plugins
+// This example plugins/index.ts can be used to load plugins
 //
 // You can change the location of this file or turn off loading
 // the plugins file with the 'pluginsFile' configuration option.
@@ -12,27 +14,13 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require("path");
+import { startDevServer } from "@cypress/vite-dev-server";
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { startDevServer } = require("@cypress/vite-dev-server");
-
-/**
- * @type {Cypress.PluginConfig}
- */
-// eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
+export default ((on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   on("dev-server:start", options => {
-    return startDevServer({
-      options,
-      viteConfig: {
-        configFile: path.resolve(__dirname, "..", "..", "vite.config.ts"),
-      },
-    });
+    return startDevServer({ options });
   });
-
   return config;
-};
+}) as Cypress.PluginConfig;

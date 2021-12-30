@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import HelloWorld from "@/components/HelloWorld/HelloWorld.vue";
+import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <template>
@@ -10,13 +10,13 @@
 </template>
 
 <style scoped>
-  main {
-    text-align: center;
-    color: #2c3e50;
-  }
+main {
+  text-align: center;
+  color: #2c3e50;
+}
 
-  .logo {
-    margin: 0 auto;
-    padding-top: 60px;
-  }
+.logo {
+  margin: 0 auto;
+  padding-top: 60px;
+}
 </style>
