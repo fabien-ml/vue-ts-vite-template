@@ -15,8 +15,8 @@ module.exports = {
     "simple-import-sort", // Plugin for sorting imports in file.
   ],
   rules: {
-    "import/first": "error",
-    "import/newline-after-import": "error",
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
     "import/no-duplicates": "error",
     "import/no-named-as-default-member": "off",
     "simple-import-sort/imports": "warn",
